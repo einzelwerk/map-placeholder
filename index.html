@@ -25,7 +25,6 @@
           </svg>
         </button>
       </div>
-      <div class="map-container"></div>
       <a class="map-placeholder__way" href="">
         Routenplaner
         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -54,17 +53,13 @@
           /*  for dev. remove */
         }
 
-        .map-container {
+        .map-placeholder {
+          height: 500px;
+          width: 100%;
           background: url("https://cdn.discordapp.com/attachments/651112958532780043/1035530282679410798/image_152.jpg");
           background-repeat: no-repeat;
           background-size: cover;
           background-position: center center;
-        }
-
-        .map-placeholder {
-          height: 500px;
-          width: 100%;
-
           position: relative;
         }
         .map-container {
@@ -173,6 +168,15 @@
           font-size: 14px;
           font-weight: 500;
           text-align: center;
+        }
+
+        @media (max-width: 768px) {
+          .map-placeholder .map-placeholder__way {
+            display: inline-block;
+            right: auto;
+            left: 50%;
+            transform: translateX(-50%);
+          }
         }
       </style>
       <script>
