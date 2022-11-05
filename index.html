@@ -1,195 +1,183 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <div class="map-placeholder">
-      <div class="map-placeholder__pin">
-        <div class="placeholder-toolbox-wrapper">
-          <div class="map-placeholder__toolbox placeholder-toolbox">
-            <h5 class="placeholder-toolbox__title">Company Name GmbH</h5>
-            <address class="placeholder-toolbox__address">Spichernstraße 8, 10777 Berlin</address>
-            <a class="placeholder-toolbox__phone" href="tel:+49 520 999-99-99" target="_blank"> +49 520 999-99-99 </a>
-          </div>
-        </div>
-        <button class="trigger-toolbox" aria-label="Open toolbox">
-          <svg width="38" height="48" viewBox="0 0 38 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M35.5847 10.2196C34.1946 7.4787 32.1377 5.13125 29.6031 3.39306C27.0686 1.65488 24.1378 0.581739 21.0801 0.2723C19.6969 0.133517 18.3033 0.133517 16.9201 0.2723C13.8625 0.581942 10.9317 1.65505 8.39713 3.39303C5.86251 5.13101 3.80533 7.47811 2.4146 10.2187C0.664848 13.7155 -0.0110079 17.6519 0.472156 21.5321C0.955319 25.4123 2.57589 29.0627 5.12976 32.0236L17.5834 47.1647C17.7554 47.374 17.9716 47.5425 18.2165 47.6582C18.4614 47.7739 18.7288 47.8339 18.9997 47.8339C19.2705 47.8339 19.538 47.7739 19.7828 47.6582C20.0277 47.5425 20.2439 47.374 20.4159 47.1647L32.8696 32.0236C35.4234 29.0629 37.044 25.4126 37.5271 21.5325C38.0103 17.6525 37.3344 13.7163 35.5847 10.2196ZM18.9997 25.8334C17.5493 25.8334 16.1314 25.4033 14.9255 24.5975C13.7195 23.7917 12.7796 22.6464 12.2245 21.3064C11.6695 19.9664 11.5243 18.4919 11.8072 17.0694C12.0902 15.6468 12.7886 14.3402 13.8142 13.3146C14.8398 12.289 16.1465 11.5906 17.569 11.3076C18.9915 11.0246 20.466 11.1699 21.806 11.7249C23.146 12.28 24.2913 13.2199 25.0971 14.4259C25.9029 15.6318 26.333 17.0496 26.333 18.5C26.3307 20.4443 25.5574 22.3082 24.1826 23.683C22.8078 25.0577 20.9439 25.8311 18.9997 25.8334Z"
-              fill="currentColor"
-            />
-          </svg>
-        </button>
+<div class="map-placeholder">
+  <div class="map-placeholder__pin">
+    <div class="placeholder-toolbox-wrapper">
+      <div class="map-placeholder__toolbox placeholder-toolbox">
+        <h5 class="placeholder-toolbox__title">Ripkens Wiesenkämper</h5>
+        <address class="placeholder-toolbox__address">Büro Essen-Rüttenscheid Zweigertstraße 14 45130 Essen</address>
+        <a class="placeholder-toolbox__phone" href="tel:+4902018718120" target="_blank"> +49 (0) 201 871 81 20 </a>
       </div>
-      <a class="map-placeholder__way" href="">
-        Routenplaner
-        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M15.625 17.5C16.6605 17.5 17.5 16.6605 17.5 15.625C17.5 14.5895 16.6605 13.75 15.625 13.75C14.5895 13.75 13.75 14.5895 13.75 15.625C13.75 16.6605 14.5895 17.5 15.625 17.5Z"
-            stroke="currentColor"
-            stroke-width="1.5"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-          <path
-            d="M5.625 4.375H13.125C13.788 4.375 14.4239 4.63839 14.8928 5.10723C15.3616 5.57607 15.625 6.21196 15.625 6.875C15.625 7.53804 15.3616 8.17393 14.8928 8.64277C14.4239 9.11161 13.788 9.375 13.125 9.375H5.625C4.7962 9.375 4.00134 9.70424 3.41529 10.2903C2.82924 10.8763 2.5 11.6712 2.5 12.5C2.5 13.3288 2.82924 14.1237 3.41529 14.7097C4.00134 15.2958 4.7962 15.625 5.625 15.625H13.75"
-            stroke="currentColor"
-            stroke-width="1.5"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-        </svg>
-      </a>
-      <style>
-        * {
-          margin: 0;
-          padding: 0;
-          box-sizing: border-box;
-          font-family: sans-serif;
-          /*  for dev. remove */
-        }
-
-        .map-placeholder {
-          height: 500px;
-          width: 100%;
-          background: url("https://cdn.discordapp.com/attachments/651112958532780043/1035530282679410798/image_152.jpg");
-          background-repeat: no-repeat;
-          background-size: cover;
-          background-position: center center;
-          position: relative;
-        }
-        .map-container {
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-        }
-        .map-placeholder .map-placeholder__pin {
-          position: absolute;
-          left: 50%;
-          top: 50%;
-          transform: translate(-50%, -50%);
-          z-index: 1010;
-        }
-
-        .map-placeholder .map-placeholder__way {
-          position: absolute;
-          right: 16px;
-          bottom: 16px;
-          background: #fff;
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          padding: 12px 20px;
-          box-shadow: 0px 8px 16px rgba(145, 145, 145, 0.24);
-          border-radius: 12px;
-          transition: 400ms;
-          text-decoration: none;
-          color: #121212;
-        }
-        .map-placeholder .map-placeholder__way svg {
-          margin-left: 8px;
-        }
-
-        .map-placeholder .map-placeholder__way:hover {
-          color: #fff;
-          background: #121212;
-        }
-
-        .trigger-toolbox {
-          all: unset;
-          cursor: pointer;
-          transition: 400ms;
-          color: #121212;
-        }
-
-        .trigger-toolbox:hover {
-          color: #4f4f4f;
-        }
-
-        .placeholder-toolbox-wrapper {
-          position: absolute;
-          left: 50%;
-          transition: 400ms;
-          transform: translateX(-50%) translateY(30px);
-          opacity: 0;
-          visibility: hidden;
-          bottom: 100%;
-          margin-bottom: 20px;
-        }
-
-        .placeholder-toolbox-wrapper.opened {
-          transform: translateX(-50%) translateY(0%);
-          opacity: 1;
-          visibility: visible;
-        }
-
-        .placeholder-toolbox-wrapper:after {
-          content: "";
-          position: absolute;
-          left: 50%;
-          transform: translateX(-50%);
-          border: 10px solid transparent;
-          border-top: 16px solid #fff;
-        }
-        .placeholder-toolbox-wrapper .placeholder-toolbox {
-          border-radius: 12px;
-          width: 250px;
-          padding: 20px 24px;
-          background: #fff;
-          box-shadow: 0px 8px 16px rgba(145, 145, 145, 0.24);
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-
-          line-height: 20px;
-        }
-
-        .placeholder-toolbox .placeholder-toolbox__title {
-          color: #848484;
-          margin-bottom: 8px;
-          font-size: 14px;
-          font-weight: 500;
-          text-align: center;
-        }
-        .placeholder-toolbox .placeholder-toolbox__address {
-          color: #121212;
-          margin-bottom: 4px;
-          font-size: 14px;
-          text-align: center;
-          font-style: normal;
-        }
-
-        .placeholder-toolbox .placeholder-toolbox__phone {
-          color: #121212;
-          font-size: 14px;
-          font-weight: 500;
-          text-align: center;
-        }
-
-        @media (max-width: 768px) {
-          .map-placeholder .map-placeholder__way {
-            
-            right: auto;
-            left: 50%;
-            transform: translateX(-50%);
-          }
-        }
-      </style>
-      <script>
-        document.addEventListener("DOMContentLoaded", function () {
-          const toolboxBtn = document.querySelector(".trigger-toolbox");
-          const toolbox = document.querySelector(".placeholder-toolbox-wrapper");
-          toolboxBtn.addEventListener("click", function () {
-            toolbox.classList.toggle("opened");
-          });
-        });
-      </script>
     </div>
-  </body>
-</html>
+    <button class="trigger-toolbox" aria-label="Open toolbox">
+      <svg width="38" height="48" viewbox="0 0 38 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M35.5847 10.2196C34.1946 7.4787 32.1377 5.13125 29.6031 3.39306C27.0686 1.65488 24.1378 0.581739 21.0801 0.2723C19.6969 0.133517 18.3033 0.133517 16.9201 0.2723C13.8625 0.581942 10.9317 1.65505 8.39713 3.39303C5.86251 5.13101 3.80533 7.47811 2.4146 10.2187C0.664848 13.7155 -0.0110079 17.6519 0.472156 21.5321C0.955319 25.4123 2.57589 29.0627 5.12976 32.0236L17.5834 47.1647C17.7554 47.374 17.9716 47.5425 18.2165 47.6582C18.4614 47.7739 18.7288 47.8339 18.9997 47.8339C19.2705 47.8339 19.538 47.7739 19.7828 47.6582C20.0277 47.5425 20.2439 47.374 20.4159 47.1647L32.8696 32.0236C35.4234 29.0629 37.044 25.4126 37.5271 21.5325C38.0103 17.6525 37.3344 13.7163 35.5847 10.2196ZM18.9997 25.8334C17.5493 25.8334 16.1314 25.4033 14.9255 24.5975C13.7195 23.7917 12.7796 22.6464 12.2245 21.3064C11.6695 19.9664 11.5243 18.4919 11.8072 17.0694C12.0902 15.6468 12.7886 14.3402 13.8142 13.3146C14.8398 12.289 16.1465 11.5906 17.569 11.3076C18.9915 11.0246 20.466 11.1699 21.806 11.7249C23.146 12.28 24.2913 13.2199 25.0971 14.4259C25.9029 15.6318 26.333 17.0496 26.333 18.5C26.3307 20.4443 25.5574 22.3082 24.1826 23.683C22.8078 25.0577 20.9439 25.8311 18.9997 25.8334Z"
+          fill="currentColor"
+        />
+      </svg>
+    </button>
+  </div>
+  <a class="map-placeholder__way" href="">
+    Routenplaner
+    <svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M15.625 17.5C16.6605 17.5 17.5 16.6605 17.5 15.625C17.5 14.5895 16.6605 13.75 15.625 13.75C14.5895 13.75 13.75 14.5895 13.75 15.625C13.75 16.6605 14.5895 17.5 15.625 17.5Z"
+        stroke="currentColor"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+      <path
+        d="M5.625 4.375H13.125C13.788 4.375 14.4239 4.63839 14.8928 5.10723C15.3616 5.57607 15.625 6.21196 15.625 6.875C15.625 7.53804 15.3616 8.17393 14.8928 8.64277C14.4239 9.11161 13.788 9.375 13.125 9.375H5.625C4.7962 9.375 4.00134 9.70424 3.41529 10.2903C2.82924 10.8763 2.5 11.6712 2.5 12.5C2.5 13.3288 2.82924 14.1237 3.41529 14.7097C4.00134 15.2958 4.7962 15.625 5.625 15.625H13.75"
+        stroke="currentColor"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
+  </a>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: sans-serif;
+      /*  for dev. remove */
+    }
+
+    .map-placeholder {
+      height: 340px;
+      width: 100%;
+      background: url("/wp-content/uploads/2022/11/image-152.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+      position: relative;
+    }
+    .map-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+    .map-placeholder .map-placeholder__pin {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1010;
+    }
+
+    .map-placeholder .map-placeholder__way {
+      position: absolute;
+      right: 16px;
+      bottom: 16px;
+      background: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 20px;
+      box-shadow: 0px 8px 16px rgba(145, 145, 145, 0.24);
+      border-radius: 12px;
+      transition: 400ms;
+      text-decoration: none;
+      color: #121212 !important;
+    }
+    .map-placeholder .map-placeholder__way svg {
+      margin-left: 8px;
+    }
+
+    .map-placeholder .map-placeholder__way:hover {
+      color: #fff;
+      background: #121212;
+    }
+
+    .trigger-toolbox {
+      all: unset;
+      cursor: pointer;
+      transition: 400ms;
+      color: #121212 !important;
+    }
+
+    .trigger-toolbox:hover {
+      color: #4f4f4f;
+    }
+
+    .placeholder-toolbox-wrapper {
+      position: absolute;
+      left: 50%;
+      transition: 400ms;
+      transform: translateX(-50%) translateY(30px);
+      opacity: 0;
+      visibility: hidden;
+      bottom: 100%;
+      margin-bottom: 20px;
+    }
+
+    .placeholder-toolbox-wrapper.opened {
+      transform: translateX(-50%) translateY(0%);
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .placeholder-toolbox-wrapper:after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      border: 10px solid transparent;
+      border-top: 16px solid #fff;
+    }
+    .placeholder-toolbox-wrapper .placeholder-toolbox {
+      border-radius: 12px;
+      width: 250px;
+      padding: 20px 24px;
+      background: #fff;
+      box-shadow: 0px 8px 16px rgba(145, 145, 145, 0.24);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      line-height: 20px;
+    }
+
+    .placeholder-toolbox .placeholder-toolbox__title {
+      color: #848484 !important;
+      margin-bottom: 8px;
+      font-size: 14px;
+      font-weight: 500;
+      text-align: center;
+    }
+    .placeholder-toolbox .placeholder-toolbox__address {
+      color: #121212 !important;
+      margin-bottom: 4px;
+      font-size: 14px;
+      text-align: center;
+      font-style: normal;
+    }
+
+    .placeholder-toolbox .placeholder-toolbox__phone {
+      color: #121212 !important;
+      font-size: 14px;
+      font-weight: 500;
+      text-align: center;
+    }
+
+    @media (max-width: 768px) {
+      .map-placeholder .map-placeholder__way {
+        right: auto;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const toolboxBtn = document.querySelector(".trigger-toolbox");
+      const toolbox = document.querySelector(".placeholder-toolbox-wrapper");
+      toolboxBtn.addEventListener("click", function () {
+        toolbox.classList.toggle("opened");
+      });
+    });
+  </script>
+</div>
