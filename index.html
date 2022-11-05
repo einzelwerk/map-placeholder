@@ -16,7 +16,11 @@
       </svg>
     </button>
   </div>
-  <a class="map-placeholder__way" href="">
+  <a
+    class="map-placeholder__way"
+    target="_blank"
+    href="https://www.google.de/maps/dir//Zweigertstra%C3%9Fe+14,+45130+Essen/@51.4376017,6.9339914,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x47b8c2d74ad5173b:0x89151c051ca73bf4!2m2!1d7.0040308!2d51.4375156?hl=de _blank"
+  >
     Routenplaner
     <svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
@@ -45,13 +49,17 @@
     }
 
     .map-placeholder {
-      height: 340px;
+      height: 500px;
       width: 100%;
-      background: url("/wp-content/uploads/2022/11/image-152.jpg");
+      background: url("/wp-content/uploads/2022/11/image-152-1.jpg");
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center center;
       position: relative;
+    }
+
+    .map-placeholder.map-placeholder--footer {
+      height: 340px;
     }
     .map-container {
       position: absolute;
@@ -173,10 +181,11 @@
   </style>
   <script>
     document.addEventListener("DOMContentLoaded", function () {
-      const toolboxBtn = document.querySelector(".trigger-toolbox");
-      const toolbox = document.querySelector(".placeholder-toolbox-wrapper");
-      toolboxBtn.addEventListener("click", function () {
-        toolbox.classList.toggle("opened");
+      const toolboxBtn = document.querySelectorAll(".trigger-toolbox");
+      document.addEventListener("click", function (e) {
+        if (e.target.closest(".trigger-toolbox")) {
+          e.target.closest(".map-placeholder").querySelector(".placeholder-toolbox-wrapper").classList.toggle("opened");
+        }
       });
     });
   </script>
